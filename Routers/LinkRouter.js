@@ -1,15 +1,15 @@
 import express from "express";
-import LinksController from "../Controlers/linkController.js";
+import LinksController from "../Controller/LinksController.js";
 
-const LinksRouter = express.Router();
+const LinkRouter = express.Router();
 
-LinksRouter.get("/", LinksController.getList);
-LinksRouter.get("/:id", LinksController.getById);
-LinksRouter.get("/redirect/:id", LinksController.redirect);
-LinksRouter.get("/clicks/:id", LinksController.getLinkClicks);
-// LinksRouter.get("/clicks/source/:id", LinksController.getClicksBySource); 
-LinksRouter.post("/", LinksController.addLink);
-LinksRouter.put("/:id", LinksController.update);
-LinksRouter.delete("/:id", LinksController.delete);
+LinkRouter.get("/", LinksController.getList);
+LinkRouter.get("/:id", LinksController.getById);
+LinkRouter.get("/redirect/:id", LinksController.redirect);
+LinkRouter.get("/clicks/:id", LinksController.getLinkClicks);
+// LinkRouter.get("/clicks/source/:id", LinksController.getClicksBySource); 
+LinkRouter.post("/", LinksController.addLink);
+LinkRouter.put("/:id", LinksController.update);
+LinkRouter.delete("/:id", LinksController.delete);
 
-export default LinksRouter;
+export default LinkRouter;
